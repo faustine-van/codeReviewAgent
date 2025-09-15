@@ -43,14 +43,14 @@ This project is a smart code review assistant that analyzes code changes in a Gi
 ## Project Structure
 
 .
-├── README.md
-├── code-changes2025-09-15T10-42-00.066Z.md
-├── index.ts
-├── package.json
-├── prompts.ts
-├── tools.ts
-└── tsconfig.json
-
+─ README.md
+─ code-changes2025-09-15T10-42-00.066Z.md
+─ index.ts
+─ package.json
+─ prompts.ts
+─ tools.ts
+─ tsconfig.json
+─ screenshots
 
 - **prompts.ts** – Contains `SYSTEM_PROMPT` with detailed instructions for the AI reviewer.  
 - **tools.ts** – Defines `getFileChangesInDirectoryTool`, `commitMessageTool`, and `markdownFileTool`.  
