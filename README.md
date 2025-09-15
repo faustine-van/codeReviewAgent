@@ -7,6 +7,10 @@ This project is a smart code review assistant that analyzes code changes in a Gi
 ---
 
 ## Features
+- 🔍 **Automated Code Review**
+- 📝 **Commit Message Generation**
+- 📄 **Markdown File Generation**
+- 🔄 **Git Integration**
 
 ### Automated Code Review
 - Reviews code changes file by file.
@@ -39,14 +43,14 @@ This project is a smart code review assistant that analyzes code changes in a Gi
 ## Project Structure
 
 .
-├─ prompts.ts # System prompt for the AI code reviewer
-├─ tools.ts # Tools: file changes, commit message, markdown generation
-├─ agent.ts # Main codeReviewAgent function
-├─ package.json
-└─ README.md
+├── README.md
+├── code-changes2025-09-15T10-42-00.066Z.md
+├── index.ts
+├── package.json
+├── prompts.ts
+├── tools.ts
+└── tsconfig.json
 
-markdown
-Copy code
 
 - **prompts.ts** – Contains `SYSTEM_PROMPT` with detailed instructions for the AI reviewer.  
 - **tools.ts** – Defines `getFileChangesInDirectoryTool`, `commitMessageTool`, and `markdownFileTool`.  
@@ -77,3 +81,8 @@ Output
 - **Review suggestions streamed to stdout.**
 - **Commit message printed to terminal.**
 - **Markdown file created in the current directory with a timestamped filename.**
+
+## screenshot
+![screenshot](./screenshots//Day-16-1.png)
+![screenshot](./screenshots//Day-16-2.png)
+![screenshot](./screenshots//Day-16-3.png)
