@@ -48,7 +48,6 @@ This project is a smart code review assistant that analyzes code changes in a Gi
 - **screenshots** – Contains screenshots of the agent in action.
 - **tsconfig.json** – TypeScript configuration file.
 
-
 ---
 
 ## Usage

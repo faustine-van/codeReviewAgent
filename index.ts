@@ -26,8 +26,19 @@ const codeReviewAgent = async (prompt: string) => {
   for await (const chunk of result.textStream) {
     process.stdout.write(chunk);
   }
+  // 2️⃣ Capture tool results (commit message, markdown file, etc.)
+  for await (const event of result.fullStream) {
+    if (event.type === "tool-result" && event.toolName === "commitMessageTool") {
+        // Cast output to the expected shape
+        const output = event.output as { message: string };
+        // The output of the tool is in event.output
+        console.log("\n\n=== Commit Message ===");
+        console.log(output.message);
+    }
+}
+
 };
 const user_prompt =
-  "Review the code changes in `../my-agent’ directory, make your reviews and suggestions file by file. Generate a commit message for the code changes. Generate a markdown file for the code changes";
+  "Review the code changes in `../my-agent’ directory, Review my code and generate a commit message";
 
 await codeReviewAgent(user_prompt);
